@@ -138,14 +138,14 @@
 
 
 
-    $('.wpo-payment-select .addToggle').on('click', function() {
+    $('.payment-select .addToggle').on('click', function() {
         $('.payment-name').addClass('active')
-        $('.wpo-payment-option').removeClass('active')
+        $('.payment-option').removeClass('active')
     })
 
 
-    $('.wpo-payment-select .removeToggle').on('click', function() {
-        $('.wpo-payment-option').addClass('active')
+    $('.payment-select .removeToggle').on('click', function() {
+        $('.payment-option').addClass('active')
         $('.payment-name').removeClass('active')
     });
 
@@ -302,15 +302,15 @@
     }
 
     // clone home style 1 navigation for sticky menu
-    if ($('.wpo-site-header .navigation').length) {
-        cloneNavForSticyMenu($('.wpo-site-header .navigation'), "sticky-header");
+    if ($('.site-header .navigation').length) {
+        cloneNavForSticyMenu($('.site-header .navigation'), "sticky-header");
     }
 
     var lastScrollTop = '';
 
     function stickyMenu($targetMenu, $toggleClass) {
         var st = $(window).scrollTop();
-        var mainMenuTop = $('.wpo-site-header .navigation');
+        var mainMenuTop = $('.site-header .navigation');
 
         if ($(window).scrollTop() > 1000) {
             if (st > lastScrollTop) {
@@ -407,8 +407,8 @@
     /*------------------------------------------
         = TESTIMONIALS SLIDER
     -------------------------------------------*/
-    if ($(".wpo-testimonial-slider").length) {
-        $(".wpo-testimonial-slider").owlCarousel({
+    if ($(".testimonial-slider").length) {
+        $(".testimonial-slider").owlCarousel({
             center: true,
             loop: true,
             margin: 30,
@@ -547,8 +547,8 @@
     ==========================================================================*/
     $(window).on("scroll", function() {
 
-        if ($(".wpo-site-header").length) {
-            stickyMenu($('.wpo-site-header .navigation'), "sticky-on");
+        if ($(".site-header").length) {
+            stickyMenu($('.site-header .navigation'), "sticky-on");
         }
 
         toggleBackToTopBtn();
